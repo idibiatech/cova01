@@ -1,4 +1,8 @@
+import Transition from "../Transition";
+
 const Home = () => {
 	return <div>Home</div>;
 };
-export default Home;
+
+const WrappedHome = Transition(Home);
+export default WrappedHome;

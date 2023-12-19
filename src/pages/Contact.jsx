@@ -1,4 +1,6 @@
+import Transition from "../Transition";
 const Contact = () => {
 	return <div>Contact</div>;
 };
-export default Contact;
+
+export default Transition(Contact);
