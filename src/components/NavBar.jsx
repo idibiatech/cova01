@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./navbar.css";
 
-import { menuSlide, linksSlide } from "../anim";
+import { menuSlide, linksSlide, footerSlide } from "../anim";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinksList = [
 	{ title: "Home", href: "/" },
 	{ title: "About", href: "/about" },
+	{ title: "Portfolio", href: "/Portfolio" },
 	{ title: "Contact", href: "/contact" },
 ];
 const NavBar = () => {
@@ -16,7 +17,7 @@ const NavBar = () => {
 		<div className="nav">
 			<div className="header-wrapper">
 				<div className="logo">
-					<Link className="nav-link" to="/">
+					<Link className="" to="/">
 						Cova
 					</Link>
 				</div>
@@ -60,7 +61,13 @@ const NavBar = () => {
 							);
 						})}
 						<div className="menuFooter">
-							<ul>
+							<motion.ul
+								custom={5}
+								variants={footerSlide}
+								animate="enter"
+								initial="initial"
+								exit="exit"
+							>
 								<li>
 									<a href="/">instagram</a>
 								</li>
@@ -73,7 +80,7 @@ const NavBar = () => {
 								<li>
 									<a href="/">linkedin</a>
 								</li>
-							</ul>
+							</motion.ul>
 						</div>
 					</motion.div>
 				)}
