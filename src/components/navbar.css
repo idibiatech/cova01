@@ -1,16 +1,97 @@
 .nav {
 	display: flex;
-
+	position: relative;
 	justify-content: space-between;
 	height: 10vh;
-
+	background-color: red;
 	align-items: center;
 }
 
-.nav-links {
-	height: 100%;
-	width: 20%;
+.burger-wrapper {
+	cursor: pointer;
+	margin-right: 20px;
+	border-radius: 50%;
+	position: fixed;
+	right: 0;
+	width: 40px;
+	height: 40px;
+	top: 3%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
+	background-color: blue;
+	z-index: 10;
+}
+.burger {
+	width: 100%;
+	height: 100%;
+}
+.burger::before,
+.burger::after {
+	content: "";
+	display: block;
+	background-color: white;
+	height: 2px;
+	width: 60%;
+	margin: auto;
+	position: relative;
+	transition: all 0.3s;
+}
+
+.burger::before {
+	top: 40%;
+}
+.burger::after {
+	top: 60%;
+}
+
+.burgerActive {
+}
+.burgerActive::before {
+	top: 50%;
+	transform: rotate(45deg);
+}
+.burgerActive::after {
+	top: 50%;
+	transform: rotate(-45deg);
+}
+.burgerInActive {
+}
+
+.nav-links {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	padding-right: 15%;
+	background-color: green;
+}
+
+.nav-item {
+	margin: 1rem 0;
+	font-size: 2rem;
+}
+
+.menuFooter {
+	position: absolute;
+	bottom: 0;
+}
+
+@media screen and (min-width: 1000px) {
+	.nav-links {
+		width: 20%;
+		padding-left: 5%;
+		align-items: normal;
+		background-color: red;
+		padding-left: 15%;
+	}
+	.nav-item {
+		margin: 1rem 0;
+		font-size: 2rem;
+	}
 }
