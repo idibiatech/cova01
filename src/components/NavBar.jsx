@@ -46,6 +46,7 @@ const NavBar = () => {
 						{navLinksList.map((item, index) => {
 							return (
 								<motion.div
+									custom={index}
 									variants={linksSlide}
 									animate="enter"
 									initial="initial"
