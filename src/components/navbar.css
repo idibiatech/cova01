@@ -80,6 +80,15 @@
 .menuFooter {
 	position: absolute;
 	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: 1rem;
+}
+.menuFooter ul {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
 }
 
 @media screen and (min-width: 1000px) {
