@@ -2,6 +2,9 @@ import Transition from "../Transition";
 import hero from "../assets/hero-01.jpg";
 import "./pages.css";
 import ui from "../assets/portfolio/ui.jpg";
+import branding from "../assets/portfolio/branding.jpg";
+import logo from "../assets/portfolio/logop.jpg";
+import web from "../assets/portfolio/web.jpg";
 
 const Home = () => {
 	return (
@@ -58,9 +61,9 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="port ">
-					<img src={ui} alt="" />
+					<img src={branding} alt="" />
 					<div className="port-content">
-						<h3>UI</h3>
+						<h3>Branding</h3>
 						<p>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
 							voluptatem corporis qui iste quas, modi aspernatur provident nihil
@@ -68,8 +71,28 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
-				<div className="port "></div>
-				<div className="port"></div>
+				<div className="port ">
+					<img src={logo} alt="" />
+					<div className="port-content">
+						<h3>Logo</h3>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+							voluptatem corporis qui iste quas, modi aspernatur provident nihil
+							obcaecati. Tempore!
+						</p>
+					</div>
+				</div>
+				<div className="port">
+					<img src={web} alt="" />
+					<div className="port-content">
+						<h3>Web</h3>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+							voluptatem corporis qui iste quas, modi aspernatur provident nihil
+							obcaecati. Tempore!
+						</p>
+					</div>
+				</div>
 			</section>
 		</>
 	);

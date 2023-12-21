@@ -116,6 +116,10 @@ section {
 	}
 
 	/* homepage portfolio intro section  */
+	.port:nth-child(odd) {
+		flex-direction: row-reverse;
+	}
+
 	.port {
 		flex-direction: row;
 	}
