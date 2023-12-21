@@ -36,7 +36,20 @@ const Home = () => {
 							on any project. We are committed to excellence and that is why we
 							rely on the principles of this four steps:
 						</p>
-						<p>Lorem ipsum dolor sit amet.</p>
+						<div className="hero-left-bottom-wrapper">
+							<div>
+								<p>Project Analysis & Research</p>
+							</div>
+							<div>
+								<p>Concept Development</p>
+							</div>
+							<div>
+								<p>Iteration</p>
+							</div>
+							<div>
+								<p>Execution/Prototyping</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
