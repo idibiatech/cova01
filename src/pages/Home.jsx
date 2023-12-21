@@ -27,7 +27,7 @@ const Home = () => {
 							on any project. We are committed to excellence and that is why we
 							rely on the principles of this four steps:{" "}
 						</p>
-						<div></div>
+						<p>Lorem ipsum dolor sit amet.</p>
 					</div>
 				</div>
 			</div>
