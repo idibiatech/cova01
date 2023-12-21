@@ -1,6 +1,7 @@
 import Transition from "../Transition";
 import hero from "../assets/hero-01.jpg";
 import "./pages.css";
+import ui from "../assets/portfolio/ui.jpg";
 
 const Home = () => {
 	return (
@@ -12,9 +13,14 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<div className="hero-content-wrapper">
+			<section className="hero-content-wrapper">
 				<div className="wrapper">
-					<div className="left-hero-content"></div>
+					<div className="left-hero-content">
+						<h3>
+							<span>CREATIVE</span> <span>OASIS OF</span>{" "}
+							<highlight className="hl-blue">VERSATILITY</highlight> AND-MORE
+						</h3>
+					</div>
 					<div className="right-hero-content">
 						<p>
 							With soo many businesses competing for the same space you are in,
@@ -25,12 +31,46 @@ const Home = () => {
 						<p>
 							We always employ our proven innovative and creative processes when
 							on any project. We are committed to excellence and that is why we
-							rely on the principles of this four steps:{" "}
+							rely on the principles of this four steps:
 						</p>
 						<p>Lorem ipsum dolor sit amet.</p>
 					</div>
 				</div>
-			</div>
+			</section>
+			<section className="what-we-do-wrapper">
+				<div className="what-we-do">
+					<p>We Code</p>
+				</div>
+			</section>
+			<section>
+				<div className="divider"></div>
+			</section>
+			<section className="portfolio-intro-wrapper">
+				<div className="port ">
+					<img src={ui} alt="image of ui design" />
+					<div className="port-content">
+						<h3>UI</h3>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+							voluptatem corporis qui iste quas, modi aspernatur provident nihil
+							obcaecati. Tempore!
+						</p>
+					</div>
+				</div>
+				<div className="port ">
+					<img src={ui} alt="" />
+					<div className="port-content">
+						<h3>UI</h3>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+							voluptatem corporis qui iste quas, modi aspernatur provident nihil
+							obcaecati. Tempore!
+						</p>
+					</div>
+				</div>
+				<div className="port "></div>
+				<div className="port"></div>
+			</section>
 		</>
 	);
 };

@@ -13,3 +13,18 @@ a {
 body {
 	background-color: black;
 }
+
+highlight {
+	color: red;
+}
+.divider {
+	margin: 3rem 0;
+	width: 100%;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.59);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+.hl-blue {
+	color: blue;
+}
