@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Transition from "../Transition";
 import hero from "../assets/hero-01.jpg";
 import "./pages.css";
@@ -5,6 +6,7 @@ import ui from "../assets/portfolio/ui.jpg";
 import branding from "../assets/portfolio/branding.jpg";
 import logo from "../assets/portfolio/logop.jpg";
 import web from "../assets/portfolio/web.jpg";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
 	return (
@@ -34,10 +36,10 @@ const Home = () => {
 						<p>
 							We always employ our proven innovative and creative processes when
 							on any project. We are committed to excellence and that is why we
-							rely on the principles of this four steps:
+							rely on the principles of this four steps
 						</p>
 						<div className="hero-left-bottom-wrapper">
-							<div>
+							<div className="x1">
 								<p>Project Analysis & Research</p>
 							</div>
 							<div>
@@ -106,7 +108,16 @@ const Home = () => {
 						</p>
 					</div>
 				</div>
+				<div>
+					<Link className="hl-blue" to="/portfolio">
+						View portfolio
+					</Link>
+				</div>
 			</section>
+			<div className="divider" style={{ margin: 0 }}></div>
+			<div>
+				<Footer />
+			</div>
 		</>
 	);
 };
