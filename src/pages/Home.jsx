@@ -7,15 +7,18 @@ import branding from "../assets/portfolio/branding.jpg";
 import logo from "../assets/portfolio/logop.jpg";
 import web from "../assets/portfolio/web.jpg";
 import Footer from "../components/Footer/Footer";
+import Reveal from "../components/Animated/Reveal";
 
 const Home = () => {
 	return (
 		<>
 			<div className="hero-wrapper">
 				<div className="hero-text-wrapper">
+					{/* <Reveal> */}
 					<p>
 						<span>C</span> <span>O</span> <span>V</span> <span>A</span>
 					</p>
+					{/* </Reveal> */}
 				</div>
 			</div>
 			<section className="hero-content-wrapper">
@@ -67,12 +70,14 @@ const Home = () => {
 				<div className="port ">
 					<img src={ui} alt="image of ui design" />
 					<div className="port-content">
-						<h3>UI</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-							voluptatem corporis qui iste quas, modi aspernatur provident nihil
-							obcaecati. Tempore!
-						</p>
+						<Reveal>
+							<h3>UI</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+								voluptatem corporis qui iste quas, modi aspernatur provident
+								nihil obcaecati. Tempore!
+							</p>
+						</Reveal>
 					</div>
 				</div>
 				<div className="port ">
@@ -122,5 +127,4 @@ const Home = () => {
 	);
 };
 
-const WrappedHome = Transition(Home);
-export default WrappedHome;
+export default Home;
