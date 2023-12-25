@@ -8,17 +8,77 @@ import logo from "../assets/portfolio/logop.jpg";
 import web from "../assets/portfolio/web.jpg";
 import Footer from "../components/Footer/Footer";
 import Reveal from "../components/Animated/Reveal";
+import { useRef, useLayoutEffect, useEffect } from "react";
+import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const Home = () => {
+	// const heroText = useRef(null);
+	const heroC = useRef(null);
+	gsap.registerPlugin(ScrollTrigger);
+	// const c = document.querySelector(".c");
+
+	useEffect(() => {
+		gsap.to(".c", {
+			y: 300,
+			x: -100,
+			rotation: 30,
+			scrollTrigger: {
+				trigger: ".hero-content-wrapper",
+				start: "top 70%",
+				end: "top top",
+				scrub: true,
+			},
+		});
+		gsap.to(".o", {
+			y: 400,
+			rotation: 150,
+			scrollTrigger: {
+				trigger: ".hero-content-wrapper",
+				start: "top 70%",
+				end: "top top",
+				scrub: true,
+			},
+		});
+		gsap.to(".v", {
+			y: 250,
+			x: 20,
+			rotation: -30,
+			scrollTrigger: {
+				trigger: ".hero-content-wrapper",
+				start: "top 70%",
+				end: "top top",
+				scrub: true,
+			},
+		});
+		gsap.to(".a", {
+			y: 350,
+			x: 50,
+			rotation: -10,
+			scrollTrigger: {
+				trigger: ".hero-content-wrapper",
+				start: "top 70%",
+				end: "top top",
+				scrub: true,
+			},
+		});
+	}, []);
+	// gsap.to(".c", {
+	// 	y: 1000,
+	// 	// scale: 10,
+	// });
 	return (
-		<>
+		<div className="pageWrapper">
 			<div className="hero-wrapper">
 				<div className="hero-text-wrapper">
-					{/* <Reveal> */}
-					<p>
-						<span>C</span> <span>O</span> <span>V</span> <span>A</span>
+					<p className="heroText">
+						<span ref={heroC} className="c">
+							C
+						</span>
+						<span className="o">O</span>
+						<span className="v">V</span> <span className="a">A</span>
 					</p>
-					{/* </Reveal> */}
 				</div>
 			</div>
 			<section className="hero-content-wrapper">
@@ -26,21 +86,26 @@ const Home = () => {
 					<div className="left-hero-content">
 						<h3>
 							<span>CREATIVE</span> <span>OASIS OF</span>{" "}
-							<highlight className="hl-blue">VERSATILITY</highlight> AND-MORE
+							<div className="hl-blue">VERSATILITY</div> AND-MORE
 						</h3>
 					</div>
 					<div className="right-hero-content">
-						<p>
-							With soo many businesses competing for the same space you are in,
-							we have carefully crafted our service to make sure you always
-							stand out in this digital age. With so much to look out for, the
-							key is to create a solution that meets the exact problem.
-						</p>
-						<p>
-							We always employ our proven innovative and creative processes when
-							on any project. We are committed to excellence and that is why we
-							rely on the principles of this four steps
-						</p>
+						<Reveal>
+							<p>
+								With soo many businesses competing for the same space you are
+								in, we have carefully crafted our service to make sure you
+								always stand out in this digital age. With so much to look out
+								for, the key is to create a solution that meets the exact
+								problem.
+							</p>{" "}
+						</Reveal>
+						<Reveal>
+							<p>
+								We always employ our proven innovative and creative processes
+								when on any project. We are committed to excellence and that is
+								why we rely on the principles of this four steps
+							</p>{" "}
+						</Reveal>
 						<div className="hero-left-bottom-wrapper">
 							<div className="x1">
 								<p>Project Analysis & Research</p>
@@ -60,7 +125,9 @@ const Home = () => {
 			</section>
 			<section className="what-we-do-wrapper">
 				<div className="what-we-do">
-					<p>We Code</p>
+					<Reveal>
+						<p>We Code</p>
+					</Reveal>
 				</div>
 			</section>
 			<section>
@@ -83,34 +150,40 @@ const Home = () => {
 				<div className="port ">
 					<img src={branding} alt="" />
 					<div className="port-content">
-						<h3>Branding</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-							voluptatem corporis qui iste quas, modi aspernatur provident nihil
-							obcaecati. Tempore!
-						</p>
+						<Reveal>
+							<h3>Branding</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+								voluptatem corporis qui iste quas, modi aspernatur provident
+								nihil obcaecati. Tempore!
+							</p>
+						</Reveal>
 					</div>
 				</div>
 				<div className="port ">
 					<img src={logo} alt="" />
 					<div className="port-content">
-						<h3>Logo</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-							voluptatem corporis qui iste quas, modi aspernatur provident nihil
-							obcaecati. Tempore!
-						</p>
+						<Reveal>
+							<h3>Logo</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+								voluptatem corporis qui iste quas, modi aspernatur provident
+								nihil obcaecati. Tempore!
+							</p>
+						</Reveal>
 					</div>
 				</div>
 				<div className="port">
 					<img src={web} alt="" />
 					<div className="port-content">
-						<h3>Web</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-							voluptatem corporis qui iste quas, modi aspernatur provident nihil
-							obcaecati. Tempore!
-						</p>
+						<Reveal>
+							<h3>Web</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
+								voluptatem corporis qui iste quas, modi aspernatur provident
+								nihil obcaecati. Tempore!
+							</p>
+						</Reveal>
 					</div>
 				</div>
 				<div>
@@ -123,7 +196,7 @@ const Home = () => {
 			<div>
 				<Footer />
 			</div>
-		</>
+		</div>
 	);
 };
 

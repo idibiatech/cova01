@@ -1,6 +1,9 @@
 section {
 	padding: 2rem 2rem;
 }
+.pageWrapper {
+	overflow: hidden;
+}
 
 .hero-wrapper {
 	position: relative;
@@ -10,9 +13,22 @@ section {
 	position: absolute;
 	bottom: 30%;
 	width: 100%;
-	/* background-color: red; */
+
 	display: flex;
 	justify-content: center;
+}
+.heroText {
+	position: relative;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+}
+.heroText span {
+	position: relative;
+}
+.c {
+	/* color: red; */
 }
 .hero-text-wrapper span {
 	font-size: 6rem;
