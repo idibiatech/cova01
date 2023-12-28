@@ -5,14 +5,41 @@
 	color: white;
 	scroll-behavior: smooth;
 }
+
+@font-face {
+	font-family: hero-font;
+	src: url("./assets/fonts/debrahtpersonaluse-regular.otf");
+}
+@font-face {
+	font-family: heading;
+	src: url("./assets/fonts/Puntodewa-Regular.otf");
+}
+@font-face {
+	font-family: text-font;
+	src: url("./assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
+}
+p {
+	/* color: black !important; */
+	font-family: text-font;
+}
 li,
 a {
 	list-style-type: none;
 	text-decoration: none;
+	font-family: text-font;
 	color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: heading;
+	color: white;
 }
 body {
 	background-color: black;
+	/* background-color: #edede9; */
 }
 
 highlight {

@@ -8,6 +8,7 @@ import logo from "../assets/portfolio/logop.jpg";
 import web from "../assets/portfolio/web.jpg";
 import Footer from "../components/Footer/Footer";
 import Reveal from "../components/Animated/Reveal";
+import { RevealImage } from "../components/Animated/Reveal";
 import { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 // import { useGSAP } from "@gsap/react";
@@ -55,7 +56,7 @@ const Home = () => {
 		gsap.to(".a", {
 			y: 350,
 			x: 50,
-			rotation: -10,
+			rotation: -30,
 			scrollTrigger: {
 				trigger: ".hero-content-wrapper",
 				start: "top 70%",
@@ -86,7 +87,7 @@ const Home = () => {
 					<div className="left-hero-content">
 						<h3>
 							<span>CREATIVE</span> <span>OASIS OF</span>{" "}
-							<div className="hl-blue">VERSATILITY</div> AND-MORE
+							<div className="hl-blue">VERSATILITY</div> AND MORE
 						</h3>
 					</div>
 					<div className="right-hero-content">
@@ -104,10 +105,10 @@ const Home = () => {
 								We always employ our proven innovative and creative processes
 								when on any project. We are committed to excellence and that is
 								why we rely on the principles of this four steps
-							</p>{" "}
+							</p>
 						</Reveal>
 						<div className="hero-left-bottom-wrapper">
-							<div className="x1">
+							{/* <div className="x1">
 								<p>Project Analysis & Research</p>
 							</div>
 							<div>
@@ -118,7 +119,18 @@ const Home = () => {
 							</div>
 							<div>
 								<p>Execution/Prototyping</p>
-							</div>
+							</div> */}
+							<RevealImage className="steps-wrapper">
+								<ul>
+									<li className="steps">Project Analysis & Research</li>
+
+									<li className="steps">Concept Development</li>
+
+									<li className="steps">Iteration</li>
+
+									<li className="steps">Execution/Prototyping</li>
+								</ul>
+							</RevealImage>
 						</div>
 					</div>
 				</div>
@@ -135,7 +147,9 @@ const Home = () => {
 			</section>
 			<section className="portfolio-intro-wrapper">
 				<div className="port ">
-					<img src={ui} alt="image of ui design" />
+					<RevealImage>
+						<img src={ui} alt="image of ui design" />
+					</RevealImage>
 					<div className="port-content">
 						<Reveal>
 							<h3>UI</h3>
@@ -148,7 +162,9 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="port ">
-					<img src={branding} alt="" />
+					<RevealImage>
+						<img src={branding} alt="" />
+					</RevealImage>
 					<div className="port-content">
 						<Reveal>
 							<h3>Branding</h3>
@@ -161,7 +177,9 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="port ">
-					<img src={logo} alt="" />
+					<RevealImage>
+						<img src={logo} alt="" />
+					</RevealImage>
 					<div className="port-content">
 						<Reveal>
 							<h3>Logo</h3>
@@ -174,7 +192,9 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="port">
-					<img src={web} alt="" />
+					<RevealImage>
+						<img src={web} alt="" />
+					</RevealImage>
 					<div className="port-content">
 						<Reveal>
 							<h3>Web</h3>
@@ -190,6 +210,15 @@ const Home = () => {
 					<Link className="hl-blue" to="/portfolio">
 						View portfolio
 					</Link>
+				</div>
+			</section>
+			<section className="home-contact">
+				<div className="contact-wrapper">
+					<h3>Get in touch</h3>
+					<p>Email us</p>
+					<a href="">
+						<div className="email-btn"></div>
+					</a>
 				</div>
 			</section>
 			<div className="divider" style={{ margin: 0 }}></div>
