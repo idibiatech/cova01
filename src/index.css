@@ -27,7 +27,7 @@ a {
 	list-style-type: none;
 	text-decoration: none;
 	font-family: text-font;
-	color: black;
+	color: white;
 }
 h1,
 h2,
@@ -42,8 +42,8 @@ body {
 	/* background-color: #edede9; */
 }
 
-highlight {
-	color: red;
+.hl-blue01 {
+	color: #087187;
 }
 .divider {
 	margin: 3rem 0;
@@ -52,7 +52,4 @@ highlight {
 	background: rgba(255, 255, 255, 0.59);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
-}
-.hl-blue {
-	color: blue;
 }

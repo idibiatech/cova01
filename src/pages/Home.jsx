@@ -13,6 +13,8 @@ import { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 // import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import iconBlue from "../assets/icons/arrow-blue.png";
+import iconWhite from "../assets/icons/arrow-white.png";
 
 const Home = () => {
 	// const heroText = useRef(null);
@@ -27,7 +29,7 @@ const Home = () => {
 			rotation: 30,
 			scrollTrigger: {
 				trigger: ".hero-content-wrapper",
-				start: "top 70%",
+				start: "top 50%",
 				end: "top top",
 				scrub: true,
 			},
@@ -37,7 +39,7 @@ const Home = () => {
 			rotation: 150,
 			scrollTrigger: {
 				trigger: ".hero-content-wrapper",
-				start: "top 70%",
+				start: "top 50%",
 				end: "top top",
 				scrub: true,
 			},
@@ -48,7 +50,7 @@ const Home = () => {
 			rotation: -30,
 			scrollTrigger: {
 				trigger: ".hero-content-wrapper",
-				start: "top 70%",
+				start: "top 50%",
 				end: "top top",
 				scrub: true,
 			},
@@ -59,8 +61,18 @@ const Home = () => {
 			rotation: -30,
 			scrollTrigger: {
 				trigger: ".hero-content-wrapper",
-				start: "top 70%",
+				start: "top 50%",
 				end: "top top",
+				scrub: true,
+			},
+		});
+		gsap.to(".hero-sub-text", {
+			opacity: 0,
+
+			scrollTrigger: {
+				trigger: ".hero-content-wrapper",
+				start: "top 50%",
+				end: "top 40%",
 				scrub: true,
 			},
 		});
@@ -80,59 +92,63 @@ const Home = () => {
 						<span className="o">O</span>
 						<span className="v">V</span> <span className="a">A</span>
 					</p>
+					<p className="hero-sub-text">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+						vitae illum laboriosam exercitationem mollitia assumenda ipsam
+						veritatis incidunt veniam tenetur.
+					</p>
 				</div>
 			</div>
 			<section className="hero-content-wrapper">
 				<div className="wrapper">
-					<div className="left-hero-content">
+					<div className="top-hero-content">
 						<h3>
-							<span>CREATIVE</span> <span>OASIS OF</span>{" "}
-							<div className="hl-blue">VERSATILITY</div> AND MORE
+							We cover a wide range of
+							<span className="hl-blue01 "> tailored services</span> and
+							products to meet your <span className="hl-blue01">needs</span>
 						</h3>
 					</div>
-					<div className="right-hero-content">
-						<Reveal>
-							<p>
-								With soo many businesses competing for the same space you are
-								in, we have carefully crafted our service to make sure you
-								always stand out in this digital age. With so much to look out
-								for, the key is to create a solution that meets the exact
-								problem.
-							</p>{" "}
-						</Reveal>
-						<Reveal>
-							<p>
-								We always employ our proven innovative and creative processes
-								when on any project. We are committed to excellence and that is
-								why we rely on the principles of this four steps
-							</p>
-						</Reveal>
-						<div className="hero-left-bottom-wrapper">
-							{/* <div className="x1">
-								<p>Project Analysis & Research</p>
-							</div>
-							<div>
-								<p>Concept Development</p>
-							</div>
-							<div>
-								<p>Iteration</p>
-							</div>
-							<div>
-								<p>Execution/Prototyping</p>
-							</div> */}
-							<RevealImage className="steps-wrapper">
-								<ul>
-									<li className="steps">Project Analysis & Research</li>
-
-									<li className="steps">Concept Development</li>
-
-									<li className="steps">Iteration</li>
-
-									<li className="steps">Execution/Prototyping</li>
-								</ul>
-							</RevealImage>
+					<div className="secondary-text">
+						<p>
+							We build engaging user experience for early-stage startups by
+							connecting the dots between users’ needs and the client’s business
+							model.
+						</p>
+						<div>
+							<a href="/">See Details</a>
 						</div>
 					</div>
+					<div className="services-wrapper">
+						<ul>
+							<li>
+								<p className="service-p">MARKETING AS A SERVICE</p>{" "}
+								<img src={iconBlue} alt="" />
+							</li>
+							<li>
+								<p className="service-p">product & brand design</p>{" "}
+								<img src={iconWhite} alt="" />
+							</li>
+							<li>
+								<p className="service-p">WEB & MOBILE DEVELOPMENT</p>{" "}
+								<img src={iconBlue} alt="" />
+							</li>
+							<li>
+								<p className="service-p">TALENT MANAGEMENT</p>{" "}
+								<img src={iconWhite} alt="" />
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div className="secondary-text">
+					<p>
+						We build engaging user experience for early-stage startups by
+						connecting the dots between users’ needs and the client’s business
+						model.
+					</p>
+					<p>
+						<a href="/">See Details</a>
+					</p>
 				</div>
 			</section>
 			<section className="what-we-do-wrapper">
