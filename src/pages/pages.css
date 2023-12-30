@@ -75,6 +75,9 @@ section {
 	justify-content: center;
 	font-size: 1rem;
 	text-align: center;
+	text-align: start;
+	padding: 0 1rem;
+	margin-bottom: 3rem;
 }
 
 .secondary-text {
@@ -155,13 +158,41 @@ section {
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 }
-/* what we do  */
-
-.what-we-do-wrapper p {
-	font-size: 2rem;
-}
 
 /* homepage portfolio intro section  */
+
+.port-intro {
+	/* background-color: red; */
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: start;
+}
+.portfolio-header h3 {
+	font-size: 0.8rem;
+	color: #bab3a9;
+}
+.port-intro-text {
+	width: 100%;
+	margin: 0.7rem 0;
+}
+
+.port-intro-text p {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.port-intro-btn-wrapper {
+	margin: 0.4rem 0;
+}
+.port-intro-btn-wrapper p {
+	padding: 0.5rem 1.5rem;
+	font-size: 1rem;
+	width: 100%;
+	border-radius: 16px;
+	background-color: #087187;
+}
+
 .port {
 	display: flex;
 	flex-direction: column;
@@ -177,47 +208,26 @@ section {
 	margin: 1rem 0;
 	padding: 0 1rem;
 }
-.home-contact {
-	/* background-color: green; */
+.port-content h4 {
+	font-size: 10px;
+	color: #727272;
 }
-.contact-wrapper {
-	/* background-color: #edede9; */
-	background-color: black;
-	border-radius: 15px;
-	width: auto;
-	height: 60vh;
+.port-content p {
+	/* background-color: red; */
+	padding-right: 30%;
+	font-size: 20px;
+}
+
+/* clients we've worked with  */
+.clients-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: black;
-	background: rgba(0, 0, 0, 0.1);
-	-webkit-backdrop-filter: blur(17px);
-	backdrop-filter: blur(17px);
 	flex-direction: column;
-}
-.contact-wrapper p,
-h3 {
-	color: black;
-}
-.contact-wrapper p {
-	font-size: 4rem;
-}
-
-.contact-wrapper .email-btn {
-	background-color: transparent;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 50%;
-	border: 1px solid rgb(255, 255, 255);
-	cursor: pointer;
-}
-.contact-wrapper h3,
-.contact-wrapper p {
-	color: white !important;
 }
 @media screen and (min-width: 1000px) {
 	section {
-		padding: 4rem 10rem;
+		padding: 1rem 10rem;
 	}
 	.hero-wrapper {
 		height: 50vh;
@@ -236,29 +246,39 @@ h3 {
 	.hero-content-wrapper {
 	}
 	.hero-content-wrapper .wrapper {
-		min-height: 95vh;
+		/* min-height: 95vh; */
 		height: auto;
 		flex-direction: column;
 		padding: 0;
-		padding-top: 10rem;
+		padding: 6rem 0;
 	}
 	.top-hero-content {
 		font-size: 2rem;
 	}
+	.top-hero-content {
+		padding: 0 4rem;
+		margin-bottom: 3rem;
+	}
 
 	.secondary-text {
 		flex-direction: row;
-		padding: 1rem 3rem;
+		padding: 1rem 4rem;
 	}
 
 	.secondary-text p {
 		margin-bottom: 1rem;
-		padding-right: 20rem;
+		padding-right: 5rem;
+		/* background-color: red; */
+		width: auto;
 	}
-	.secondary-text div {
-		width: 10%;
+	.secondary-text a {
+		width: 15rem;
 		display: flex;
 		justify-content: center;
+		/* background-color: rgb(171, 136, 136); */
+		height: 100%;
+		display: flex;
+		align-items: flex-end;
 	}
 
 	.services-wrapper ul {
@@ -273,28 +293,51 @@ h3 {
 		padding: 0 5rem;
 		margin: 1rem 0;
 	}
-	/* what we do  */
 
-	.what-we-do-wrapper p {
-		font-size: 4rem;
-	}
-	.steps {
-		color: #3d5a80;
-		height: 20%;
-		padding: 1rem 0;
-		display: flex;
-		justify-content: start;
-		align-items: center;
-		padding-left: 3rem;
-
-		border-top: 2px solid #3d5a80;
-		border-right: 0px;
-		border-bottom: 0px;
-		border-left: 2px solid #3d5a80;
-		font-size: 2rem;
-		font-weight: bold;
-	}
 	/* homepage portfolio intro section  */
+
+	.portfolio-header h3 {
+		margin-bottom: 3rem;
+	}
+	.port-intro {
+		align-items: center;
+	}
+	.port-intro-btn-wrapper {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 15%;
+	}
+
+	.port-intro-text {
+		width: 70%;
+		padding: 0;
+		padding-right: 14rem;
+	}
+	.port-intro-text p {
+		font-size: 3rem;
+	}
+	.port-intro-btn-wrapper a {
+		width: 100%;
+	}
+	.port-intro-btn-wrapper p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem 0rem;
+		font-size: 1rem;
+		width: 100%;
+		background-color: #087187;
+	}
+	.port-intro {
+		height: 5rem;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+
 	.port:nth-child(odd) {
 		flex-direction: row-reverse;
 	}

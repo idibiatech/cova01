@@ -8,7 +8,7 @@ import logo from "../assets/portfolio/logop.jpg";
 import web from "../assets/portfolio/web.jpg";
 import Footer from "../components/Footer/Footer";
 import Reveal from "../components/Animated/Reveal";
-import { RevealImage } from "../components/Animated/Reveal";
+import { RevealImage, RevealIcon } from "../components/Animated/Reveal";
 import { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
 // import { useGSAP } from "@gsap/react";
@@ -92,6 +92,7 @@ const Home = () => {
 						<span className="o">O</span>
 						<span className="v">V</span> <span className="a">A</span>
 					</p>
+
 					<p className="hero-sub-text">
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores
 						vitae illum laboriosam exercitationem mollitia assumenda ipsam
@@ -102,78 +103,93 @@ const Home = () => {
 			<section className="hero-content-wrapper">
 				<div className="wrapper">
 					<div className="top-hero-content">
-						<h3>
-							We cover a wide range of
-							<span className="hl-blue01 "> tailored services</span> and
-							products to meet your <span className="hl-blue01">needs</span>
-						</h3>
+						<Reveal>
+							<h3>
+								We cover a wide range of
+								<span className="hl-blue01 "> tailored services</span> and
+								products to meet your <span className="hl-blue01">needs</span>
+							</h3>
+						</Reveal>
 					</div>
 					<div className="secondary-text">
-						<p>
-							We build engaging user experience for early-stage startups by
-							connecting the dots between users’ needs and the client’s business
-							model.
-						</p>
-						<div>
-							<a href="/">See Details</a>
+						<Reveal>
+							<p className="secondary-text-p">
+								We build engaging user experience for early-stage startups by
+								connecting the dots between users’ needs and the client’s
+								business model.
+							</p>
+						</Reveal>
+						<div className="secondary-text-a">
+							<Reveal>
+								<a href="/">See Details</a>
+							</Reveal>
 						</div>
 					</div>
 					<div className="services-wrapper">
 						<ul>
 							<li>
-								<p className="service-p">MARKETING AS A SERVICE</p>{" "}
-								<img src={iconBlue} alt="" />
+								<Reveal>
+									<p className="service-p">MARKETING AS A SERVICE</p>{" "}
+								</Reveal>
+								<RevealIcon>
+									<img src={iconBlue} alt="" />
+								</RevealIcon>
 							</li>
 							<li>
-								<p className="service-p">product & brand design</p>{" "}
-								<img src={iconWhite} alt="" />
+								<Reveal>
+									<p className="service-p">product & brand design</p>{" "}
+								</Reveal>
+								<RevealIcon>
+									<img src={iconWhite} alt="" />
+								</RevealIcon>
 							</li>
 							<li>
-								<p className="service-p">WEB & MOBILE DEVELOPMENT</p>{" "}
-								<img src={iconBlue} alt="" />
+								<Reveal>
+									<p className="service-p">WEB & MOBILE DEVELOPMENT</p>{" "}
+								</Reveal>
+								<RevealIcon>
+									<img src={iconBlue} alt="" />
+								</RevealIcon>
 							</li>
+
 							<li>
-								<p className="service-p">TALENT MANAGEMENT</p>{" "}
-								<img src={iconWhite} alt="" />
+								<Reveal>
+									<p className="service-p">TALENT MANAGEMENT</p>{" "}
+								</Reveal>
+								<RevealIcon>
+									<img src={iconWhite} alt="" />
+								</RevealIcon>
 							</li>
 						</ul>
 					</div>
 				</div>
+			</section>
 
-				<div className="secondary-text">
-					<p>
-						We build engaging user experience for early-stage startups by
-						connecting the dots between users’ needs and the client’s business
-						model.
-					</p>
-					<p>
-						<a href="/">See Details</a>
-					</p>
-				</div>
-			</section>
-			<section className="what-we-do-wrapper">
-				<div className="what-we-do">
-					<Reveal>
-						<p>We Code</p>
-					</Reveal>
-				</div>
-			</section>
-			<section>
-				<div className="divider"></div>
-			</section>
 			<section className="portfolio-intro-wrapper">
+				<div className="portfolio-header">
+					<h3>Featured projects</h3>
+					<div className="port-intro">
+						<div className="port-intro-text">
+							<p>We create beautiful, practical works</p>
+						</div>
+						<div className="port-intro-btn-wrapper">
+							<a href="">
+								<p className="port-intro-btn">VIEW ALL PROJECT</p>
+							</a>
+						</div>
+					</div>
+				</div>
 				<div className="port ">
 					<RevealImage>
 						<img src={ui} alt="image of ui design" />
 					</RevealImage>
 					<div className="port-content">
 						<Reveal>
-							<h3>UI</h3>
 							<p>
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-								voluptatem corporis qui iste quas, modi aspernatur provident
-								nihil obcaecati. Tempore!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+								nulla.
 							</p>
+							<h4>UI/UX Development</h4>
 						</Reveal>
 					</div>
 				</div>
@@ -183,12 +199,11 @@ const Home = () => {
 					</RevealImage>
 					<div className="port-content">
 						<Reveal>
-							<h3>Branding</h3>
 							<p>
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-								voluptatem corporis qui iste quas, modi aspernatur provident
-								nihil obcaecati. Tempore!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+								nulla.
 							</p>
+							<h4>Product Branding</h4>
 						</Reveal>
 					</div>
 				</div>
@@ -198,12 +213,11 @@ const Home = () => {
 					</RevealImage>
 					<div className="port-content">
 						<Reveal>
-							<h3>Logo</h3>
 							<p>
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-								voluptatem corporis qui iste quas, modi aspernatur provident
-								nihil obcaecati. Tempore!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+								nulla.
 							</p>
+							<h4>Logo Design</h4>
 						</Reveal>
 					</div>
 				</div>
@@ -213,22 +227,16 @@ const Home = () => {
 					</RevealImage>
 					<div className="port-content">
 						<Reveal>
-							<h3>Web</h3>
 							<p>
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id
-								voluptatem corporis qui iste quas, modi aspernatur provident
-								nihil obcaecati. Tempore!
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+								nulla.
 							</p>
+							<h4>Web Development</h4>
 						</Reveal>
 					</div>
 				</div>
-				<div>
-					<Link className="hl-blue" to="/portfolio">
-						View portfolio
-					</Link>
-				</div>
 			</section>
-			<section className="home-contact">
+			{/* <section className="home-contact">
 				<div className="contact-wrapper">
 					<h3>Get in touch</h3>
 					<p>Email us</p>
@@ -236,8 +244,11 @@ const Home = () => {
 						<div className="email-btn"></div>
 					</a>
 				</div>
+			</section> */}
+			{/* <div className="divider" style={{ margin: 0 }}></div> */}
+			<section className="clients-wrapper">
+				<h3>Clients we’ve worked with</h3>
 			</section>
-			<div className="divider" style={{ margin: 0 }}></div>
 			<div>
 				<Footer />
 			</div>

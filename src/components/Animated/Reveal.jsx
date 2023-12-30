@@ -24,7 +24,7 @@ const Reveal = (props) => {
 				}}
 				initial="hidden"
 				animate={mainControls}
-				transition={{ delay: 0.5, delay: 0.3 }}
+				transition={{ delay: 0.5, duration: 0.3 }}
 				className="reveal"
 			>
 				{props.children}
@@ -69,6 +69,38 @@ export const RevealImage = (props) => {
 				animate={mainControls}
 				transition={{ delay: 0.5, duration: 0.6 }}
 				className="reveal"
+				style={{ originY: 1 }}
+			>
+				{props.children}
+			</motion.div>
+		</div>
+	);
+};
+export const RevealIcon = (props) => {
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
+
+	const mainControls = useAnimation();
+	const slideControls = useAnimation();
+
+	useEffect(() => {
+		if (isInView) {
+			mainControls.start("visible");
+			slideControls.start("visible");
+		}
+	}, [isInView]);
+	return (
+		<div>
+			<motion.div
+				ref={ref}
+				variants={{
+					hidden: { opacity: 0, scaleY: 0 },
+					visible: { opacity: 1, scaleY: 1 },
+				}}
+				initial="hidden"
+				animate={mainControls}
+				transition={{ delay: 0.5, duration: 0.3 }}
+				className="revealIcon"
 				style={{ originY: 1 }}
 			>
 				{props.children}
