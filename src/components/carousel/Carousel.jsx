@@ -59,6 +59,9 @@ const Images = () => {
 						<div className="carousel-text-container">
 							<h3>{item.heading}</h3>
 							<p>{item.text}</p>
+							<a href="/">
+								<div className="carousel-btn">View Portfolio</div>
+							</a>
 						</div>
 					</div>
 				);

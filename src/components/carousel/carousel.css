@@ -1,5 +1,5 @@
 .carousel-wrapper {
-	background-color: blue;
+	/* background-color: blue; */
 
 	/* min-height: 30rem; */
 	height: auto;
@@ -30,7 +30,13 @@
 
 	/* background-color: yellow; */
 }
-
+.carousel-text-container {
+	width: 100%;
+	padding: 0 0rem;
+}
+.carousel-text-container h3 {
+	margin: 0.6rem 0;
+}
 .carousel-Image {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -50,25 +56,39 @@
 .carousel-text-container {
 	/* height: 20%; */
 }
-
+.carousel-text-container a {
+	width: auto;
+	margin: 0.5rem 0;
+}
+.carousel-btn {
+	width: 100%;
+	color: rgb(234, 234, 234);
+	text-decoration: underline;
+}
 @media screen and (min-width: 1000px) {
 	.carousel-container {
 		display: flex;
 		justify-content: start;
 		align-items: center;
+		/* background-color: red; */
+		padding: 2rem 10rem;
+		overflow: hidden;
 	}
 	.carousel-item-wrapper {
 		padding: 0rem;
 	}
+
 	.carousel-Image {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
 
-		width: 40rem;
+		width: 30rem;
 		aspect-ratio: 16 / 9;
-		background-color: red;
 		flex-shrink: 0;
 		margin: 0 1rem;
+	}
+	.carousel-text-container {
+		padding: 0 1rem;
 	}
 }

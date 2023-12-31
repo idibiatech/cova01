@@ -84,7 +84,6 @@ const Home = () => {
 	// });
 	return (
 		<div className="pageWrapper">
-			<Carousel />
 			<div className="hero-wrapper">
 				<div className="hero-text-wrapper">
 					<p className="heroText">
@@ -167,7 +166,7 @@ const Home = () => {
 				</div>
 			</section>
 
-			<section className="portfolio-intro-wrapper">
+			{/* <section className="portfolio-intro-wrapper">
 				<div className="portfolio-header">
 					<h3>Featured projects</h3>
 					<div className="port-intro">
@@ -237,7 +236,7 @@ const Home = () => {
 						</Reveal>
 					</div>
 				</div>
-			</section>
+			</section> */}
 			{/* <section className="home-contact">
 				<div className="contact-wrapper">
 					<h3>Get in touch</h3>
@@ -248,6 +247,9 @@ const Home = () => {
 				</div>
 			</section> */}
 			{/* <div className="divider" style={{ margin: 0 }}></div> */}
+			<section className="portfolio-wrapper">
+				<Carousel />
+			</section>
 			<section className="clients-wrapper">
 				<h3>Clients we’ve worked with</h3>
 			</section>
