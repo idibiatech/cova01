@@ -15,6 +15,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import iconBlue from "../assets/icons/arrow-blue.png";
 import iconWhite from "../assets/icons/arrow-white.png";
+import Carousel from "../components/carousel/Carousel";
 
 const Home = () => {
 	// const heroText = useRef(null);
@@ -83,6 +84,7 @@ const Home = () => {
 	// });
 	return (
 		<div className="pageWrapper">
+			<Carousel />
 			<div className="hero-wrapper">
 				<div className="hero-text-wrapper">
 					<p className="heroText">
