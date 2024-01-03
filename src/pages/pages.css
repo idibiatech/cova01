@@ -427,9 +427,13 @@ enquiry
 
 		/* gap: 3rem; */
 	}
-	.right-cont {
+	.enquiry-wrapper .right .right-cont {
 		height: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: start;
 	}
+
 	.enquiry-wrapper .right img {
 		width: 3rem;
 		margin-right: 1rem;
