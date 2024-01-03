@@ -1,21 +1,28 @@
-import { Link } from "react-router-dom";
-import Transition from "../Transition";
-import hero from "../assets/hero-01.jpg";
 import "./pages.css";
-import ui from "../assets/portfolio/ui.jpg";
-import branding from "../assets/portfolio/branding.jpg";
-import logo from "../assets/portfolio/logop.jpg";
-import web from "../assets/portfolio/web.jpg";
-import Footer from "../components/Footer/Footer";
-import Reveal from "../components/Animated/Reveal";
-import { RevealImage, RevealIcon } from "../components/Animated/Reveal";
+// dependency imports
 import { useRef, useLayoutEffect, useEffect } from "react";
 import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
+
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import iconBlue from "../assets/icons/arrow-blue.png";
 import iconWhite from "../assets/icons/arrow-white.png";
 import Carousel from "../components/carousel/Carousel";
+import { Link } from "react-router-dom";
+
+// image imports
+import hero from "../assets/hero-01.jpg";
+import ui from "../assets/portfolio/ui.jpg";
+import branding from "../assets/portfolio/branding.jpg";
+import logo from "../assets/portfolio/logop.jpg";
+import web from "../assets/portfolio/web.jpg";
+import pinIcon from "../assets/icons/pin.png";
+import emailIcon from "../assets/icons/email.png";
+
+// comp imports
+import Transition from "../Transition";
+import Footer from "../components/Footer/Footer";
+import Reveal from "../components/Animated/Reveal";
+import { RevealImage, RevealIcon } from "../components/Animated/Reveal";
 
 const Home = () => {
 	// const heroText = useRef(null);
@@ -248,10 +255,42 @@ const Home = () => {
 			</section> */}
 			{/* <div className="divider" style={{ margin: 0 }}></div> */}
 			<section className="portfolio-wrapper">
+				<div className="portfolio-header">
+					<h3>Featured projects</h3>
+					<div className="port-intro">
+						<div className="port-intro-text">
+							<p>We create beautiful, practical works</p>
+						</div>
+						<div className="port-intro-btn-wrapper">
+							<a href="">
+								<p className="port-intro-btn">VIEW ALL PROJECT</p>
+							</a>
+						</div>
+					</div>
+				</div>
 				<Carousel />
 			</section>
 			<section className="clients-wrapper">
 				<h3>Clients we’ve worked with</h3>
+				<div className="client-icon"></div>
+			</section>
+
+			<section className="enquiry-wrapper">
+				<div className="left">
+					<p>Have a project? Let's do it together</p>
+				</div>
+				<div className="right">
+					<div className="right-one right-cont">
+						<img src={pinIcon} alt="pin icon for location" />{" "}
+						<p>
+							Lorem ipsum dolor sit amet consectetur. Orci vitae ac eu ornare.
+						</p>
+					</div>
+					<div className="right-two right-cont">
+						<img src={emailIcon} alt="email icon for location" />{" "}
+						<p>contact@covatech.com</p>
+					</div>
+				</div>
 			</section>
 			<div>
 				<Footer />

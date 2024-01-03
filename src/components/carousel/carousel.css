@@ -66,12 +66,15 @@
 	text-decoration: underline;
 }
 @media screen and (min-width: 1000px) {
+	.carousel-wrapper {
+		padding: 1rem 10rem;
+	}
 	.carousel-container {
 		display: flex;
 		justify-content: start;
 		align-items: center;
-		/* background-color: red; */
-		padding: 2rem 10rem;
+
+		/* padding: 2rem 10rem; */
 		overflow: hidden;
 	}
 	.carousel-item-wrapper {
