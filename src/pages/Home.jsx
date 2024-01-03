@@ -292,9 +292,9 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			<div>
+			<section>
 				<Footer />
-			</div>
+			</section>
 		</div>
 	);
 };
