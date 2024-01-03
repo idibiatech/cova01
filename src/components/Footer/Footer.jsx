@@ -29,7 +29,7 @@ const Footer = () => {
 				</ul>
 			</div>
 			<div className="footer-left-wrapper">
-				<p>© 2024 COVA</p>
+				<p>© Copyright 2024, All Rights Reserved</p>
 			</div>
 		</div>
 	);
