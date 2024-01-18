@@ -288,7 +288,9 @@ const Home = () => {
 					</div>
 					<div className="right-two right-cont">
 						<img src={emailIcon} alt="email icon for location" />{" "}
-						<p>contact@covatech.com</p>
+						<p>
+							<a href="/">contact@covatech.com</a>
+						</p>
 					</div>
 				</div>
 			</section>

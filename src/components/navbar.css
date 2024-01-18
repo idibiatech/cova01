@@ -3,7 +3,7 @@
 	position: relative;
 	justify-content: space-between;
 	height: 10vh;
-	/* background-color: red; */
+
 	align-items: center;
 	z-index: 100;
 }
@@ -20,7 +20,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #366fe1;
+
 	z-index: 10;
 }
 
@@ -75,9 +75,9 @@
 	align-items: end;
 	padding-right: 15%;
 	background-color: black;
-	background-image: url("../assets/astronaut.png");
-	background-size: contain;
-	background-position: calc(10rem) calc(100%);
+	/* background-image: url("../assets/wave.png"); */
+	background-size: center;
+	/* background-position: calc(10rem) calc(100%); */
 	background-repeat: no-repeat;
 }
 
@@ -87,7 +87,6 @@
 }
 .nav-link {
 	width: 100%;
-	/* background-color: red; */
 }
 .nav-link:hover {
 	/* background-color: red; */
@@ -108,16 +107,17 @@
 
 @media screen and (min-width: 1000px) {
 	.nav-links {
-		width: 20%;
+		width: 50%;
 		padding-left: 5%;
-		align-items: normal;
+		align-items: flex-end;
 		/* background-color: red; */
-		padding-left: 15%;
+		/* padding-left: 15%; */
 	}
 	.nav-item {
 		margin: 1rem 0;
-		font-size: 2rem;
-		background-color: red;
+		font-size: 5rem;
+		/* background-color: red; */
+		text-align: end;
 		width: 100%;
 	}
 
