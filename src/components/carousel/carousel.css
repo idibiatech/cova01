@@ -25,7 +25,7 @@
 	justify-content: start;
 	align-items: center;
 	width: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 	height: 100%;
 
 	/* background-color: yellow; */
@@ -75,7 +75,7 @@
 		align-items: center;
 
 		/* padding: 2rem 10rem; */
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 	.carousel-item-wrapper {
 		padding: 0rem;

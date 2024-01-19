@@ -12,9 +12,9 @@ const Contact = () => {
 		x: 1000,
 	});
 	return (
-		<div className="contact">
+		<div className="contact bg-wave2 bg-center bg-cover ">
 			<div className="contact-top">
-				<h1>Get in touch today</h1>
+				<h1 className="text-5xl ">Get in touch today</h1>
 				<p>
 					Lorem ipsum dolor sit amet consectetur. Urna malesuada faucibus ut
 					vestibulum id at. Morbi lectus facilisis urna auctor euismod sed sed
@@ -62,14 +62,24 @@ const Contact = () => {
 				</div>
 
 				<div className="contact-item">
-					<img src={emailBlack} alt="" />
+					<img src={phone} alt="" />
 					<h3>SEE OUR SOCIALS</h3>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
 						voluptatum.
 					</p>
 					<div>
-						<a href="mailto:support@example.com">support@example.com</a>
+						<ul className="flex gap-3">
+							<li>
+								<a href="/">LinkedIn</a>
+							</li>
+							<li>
+								<a href="/">instagram</a>
+							</li>
+							<li>
+								<a href="/">Facebook</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

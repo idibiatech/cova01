@@ -5,6 +5,8 @@ import logo from "../../assets/portfolio/logop.jpg";
 import web from "../../assets/portfolio/web.jpg";
 import Reveal from "../Animated/Reveal";
 import { RevealImage } from "../Animated/Reveal";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const carouselItem = [
 	{
@@ -30,11 +32,33 @@ const carouselItem = [
 ];
 
 const Carousel = () => {
+	const onDragStart = () => {
+		console.log("start");
+		setDragging(true);
+	};
+	const onDragEnd = () => {
+		console.log("end");
+		setDragging(false);
+	};
+	const [dragging, setDragging] = useState(false);
+	const [imgIndex, setImageIndex] = useState(0);
 	return (
 		<div className="carousel-wrapper">
-			<div className="carousel-container">
+			<motion.div
+				drag="x"
+				dragConstraints={{
+					left: 0,
+					right: 0,
+				}}
+				onDragStart={onDragStart}
+				onDragEnd={onDragEnd}
+				animate={{
+					translateX: `-${imgIndex * 30}%`,
+				}}
+				className="carousel-container"
+			>
 				<Images />
-			</div>
+			</motion.div>
 		</div>
 	);
 };
@@ -45,7 +69,7 @@ const Images = () => {
 		<>
 			{carouselItem.map((item, index) => {
 				return (
-					<div className="carousel-item-wrapper">
+					<motion.div className="carousel-item-wrapper">
 						<RevealImage>
 							<div
 								key={index}
@@ -64,7 +88,7 @@ const Images = () => {
 								</a>
 							</Reveal>
 						</div>
-					</div>
+					</motion.div>
 				);
 			})}
 		</>

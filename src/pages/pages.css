@@ -485,8 +485,9 @@ enquiry
 
 	.contact-top {
 		width: 80%;
-		background-color: red;
 		margin: auto;
+	}
+	.contact-top h1 {
 	}
 	.contact-wrapper {
 		padding: 0 1rem;
